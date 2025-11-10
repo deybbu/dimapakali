@@ -1,0 +1,1321 @@
+/* Ticketix Main Styles */
+
+/* User Profile Dropdown Styles */
+.user-profile {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #00BFFF, #3C50B2);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  user-select: none;
+  outline: none;
+}
+
+.profile-button:hover {
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.4);
+}
+
+.profile-button:active {
+  transform: scale(0.95);
+}
+
+.profile-button.active {
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 16px rgba(0, 191, 255, 0.6);
+}
+
+.profile-initials {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 12px;
+  background: rgb(0, 0, 0);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  min-width: 220px;
+  z-index: 1000;
+  overflow: hidden;
+  animation: fadeInDown 0.3s ease;
+}
+
+.profile-dropdown.show {
+  display: block;
+}
+
+.dropdown-header {
+  padding: 16px;
+  background: linear-gradient(135deg, #00BFFF, #3C50B2);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dropdown-header-initials {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.dropdown-header-name {
+  font-size: 15px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: #f8f4f4;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(135deg, #00BFFF, #3C50B2);
+}
+
+.dropdown-item:first-of-type {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.dropdown-item:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.dropdown-icon {
+  margin-right: 10px;
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 4px 0;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section-specific styling for proper separation */
+#now-showing {
+  padding: 60px 20px;
+  margin-bottom: 40px;
+  /* Change main-background color for Now Showing */
+  background: linear-gradient(135deg, rgba(0, 191, 255, 0.05), rgba(60, 80, 178, 0.05));
+  border-radius: 20px;
+  margin: 40px 20px;
+}
+
+#coming-soon {
+  padding: 60px 20px;
+  margin-top: 40px;
+  /* Change main-background color for Coming Soon */
+  background: linear-gradient(135deg, rgba(0, 191, 255, 0.219), rgba(0, 191, 255, 0.082));
+  border-radius: 20px;
+  margin: 40px 20px;
+}
+
+#now-showing h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #00BFFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#coming-soon h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #FF6B35;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact section styling */
+#contact {
+  background: linear-gradient(to bottom, #00BFFF, #3C50B2);
+  margin: 40px 20px;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-info h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.contact-info p {
+  color: white;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.contact-form h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #3C50B2;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #00BFFF;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Section Header Styling - Now using standard h2 styling */
+
+/* Movie Grid Styling - Now Showing section uses same layout as Coming Soon */
+
+/* Search Section Styling */
+.search-section {
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+}
+
+.search-container h3 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 1.8em;
+}
+
+.search-container p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 25px;
+  font-size: 1.1em;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-input {
+  flex: 1;
+  padding: 15px 20px;
+  font-size: 16px;
+  border: 2px solid #00BFFF;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  background: white;
+  color: #333;
+}
+
+.search-input:focus {
+  border-color: #3C50B2;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.3);
+}
+
+.search-btn {
+  padding: 15px 25px;
+  background: linear-gradient(to right, #00BFFF, #3C50B2);
+  color: white;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.search-btn:hover {
+  background: linear-gradient(to right, #3C50B2, #00BFFF);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.search-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive design for search bar */
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .search-input {
+    border-radius: 25px;
+    margin-bottom: 10px;
+  }
+  
+  .search-btn {
+    border-radius: 25px;
+    min-width: auto;
+  }
+
+  /* Profile dropdown responsive */
+  .profile-button {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  .profile-initials {
+    font-size: 12px;
+  }
+
+  .profile-dropdown {
+    right: 0;
+    min-width: 200px;
+  }
+
+  .dropdown-header {
+    padding: 14px;
+  }
+
+  .dropdown-header-initials {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  .dropdown-header-name {
+    font-size: 14px;
+  }
+
+  .dropdown-item {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Movie Card Styling - Responsive */
+.movie {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  transform: scale(1.05); /* Display at hover size by default */
+  width: 100%;
+  min-width: 200px;
+  max-width: 300px;
+  height: 450px; /* Fixed height for consistency */
+  margin: 0 auto;
+}
+
+.movie:hover {
+  transform: scale(1.05); /* Keep same size on hover */
+}
+
+.movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: filter 0.3s ease;
+}
+
+.movie:hover img {
+  filter: brightness(0.7);
+}
+
+.movie-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.movie:hover .movie-overlay {
+  opacity: 1;
+}
+
+.movie-info {
+  text-align: center;
+  padding: 20px;
+}
+
+.movie-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  color: #00BFFF;
+}
+
+.movie-info p {
+  margin: 5px 0 20px 0;
+  font-size: 1em;
+}
+
+/* Coming Soon movies - always visible info */
+#coming-soon .movie {
+  position: relative;
+}
+
+#coming-soon .movie-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+  color: white;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+}
+
+#coming-soon .movie-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.3em;
+  color: #FF6B35;
+  font-weight: bold;
+}
+
+#coming-soon .movie-info p {
+  margin: 3px 0 8px 0;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+#coming-soon .movie-info .release-date {
+  color: #FFD700;
+  font-weight: bold;
+  font-size: 0.95em;
+  margin: 5px 0 10px 0;
+}
+
+#coming-soon .movie-info .notify-btn {
+  background-color: #FF6B35;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+}
+
+#coming-soon .movie-info .notify-btn:hover {
+  background-color: #E55A2B;
+  transform: translateY(-2px);
+}
+
+.movie-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.action-btn {
+  background-color: #00BFFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+}
+
+.action-btn:hover {
+  background-color: #3C50B2;
+  transform: translateY(-2px);
+}
+
+.trailer-btn {
+  background-color: #FF6B35;
+}
+
+.trailer-btn:hover {
+  background-color: #E55A2B;
+}
+
+.ticket-btn {
+  background-color: #00BFFF;
+}
+
+.ticket-btn:hover {
+  background-color: #3C50B2;
+}
+
+.release-date {
+  color: #FFD700;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.notify-btn {
+  background-color: #3C50B2;
+}
+
+.notify-btn:hover {
+  background-color: #00BFFF;
+}
+
+/* CSS Reset for Hero Carousel - Override ALL browser defaults */
+section#home.hero,
+section#home.hero *,
+section#home.hero *::before,
+section#home.hero *::after {
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  outline: none !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  outline-color: transparent !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Hero Carousel Styling - COMPLETELY BORDERLESS */
+.hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none !important;
+  box-sizing: border-box;
+}
+
+/* Ensure all carousel elements are completely borderless */
+.hero *,
+.hero *::before,
+.hero *::after {
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.hero-slides *,
+.hero-slides *::before,
+.hero-slides *::after {
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none !important;
+}
+
+.hero-slide *,
+.hero-slide *::before,
+.hero-slide *::after {
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none !important;
+}
+
+.hero-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none !important;
+  box-sizing: border-box;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none !important;
+  box-sizing: border-box;
+}
+
+.hero-slide.active {
+  transform: translateX(0);
+}
+
+.hero-slide.prev {
+  transform: translateX(-100%);
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.3);
+  z-index: 1;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none !important;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 0 20px;
+  pointer-events: auto;
+}
+
+.movie-logo {
+  max-width: 300px;
+  max-height: 150px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px rgba(0, 191, 255, 0.5));
+}
+
+.hero-content h1 {
+  font-size: 3.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero .btn {
+  background-color: rgba(0, 191, 255, 0.8);
+  color: white;
+  border: 2px solid #00BFFF;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+  display: inline-block;
+}
+
+.hero .btn:hover {
+  background-color: #00BFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 191, 255, 0.4);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2em;
+  padding: 20px;
+  cursor: pointer;
+  z-index: 3;
+  transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.arrow.left {
+  left: 80px;
+}
+
+.arrow.right {
+  right: 80px;
+}
+
+.slide-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #00BFFF;
+}
+
+.indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: fadeIn ease;
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 600px;
+  color: white;
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+.booking-modal {
+  max-width: 500px;
+}
+
+.movie-detail-modal {
+  max-width: 800px;
+}
+
+.trailer-modal {
+  max-width: 900px;
+}
+
+.movie-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.movie-poster img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.movie-details h2 {
+  color: #00BFFF;
+  margin-bottom: 15px;
+  font-size: 2em;
+}
+
+.movie-details p {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.movie-description {
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(0, 191, 255, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #00BFFF;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.modal-actions .btn {
+  flex: 1;
+  padding: 15px 20px;
+  font-size: 1.1em;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.close:hover {
+  color: #00BFFF;
+}
+
+/* Trailer Modal Specific Styles */
+.trailer-placeholder {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.trailer-icon {
+  font-size: 4em;
+  margin-bottom: 20px;
+}
+
+.trailer-placeholder p {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+#trailerContainer {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#youtubePlayer {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#trailerVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Booking Form Styles */
+.booking-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #00BFFF;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 16px;
+}
+
+.form-group select:focus {
+  border-color: #00BFFF;
+  outline: none;
+}
+
+.price-display {
+  background: linear-gradient(to right, #00BFFF, #3C50B2);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.price-display p {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.book-now-btn {
+  width: 100%;
+  background: linear-gradient(to right, #00BFFF, #3C50B2);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.book-now-btn:hover {
+  transform: translateY(-2px);
+}
+
+.login-required {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.login-required p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.login-required .btn {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+  
+  .movie-logo {
+    max-width: 250px;
+    max-height: 120px;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .arrow {
+    font-size: 1.5em;
+    padding: 15px;
+  }
+  
+  .movie-detail-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+  
+  .trailer-modal {
+    width: 95%;
+    margin: 2% auto;
+  }
+  
+  #youtubePlayer {
+    padding-bottom: 56.25%;
+  }
+  
+  /* Section-specific responsive styling */
+  #now-showing {
+    padding: 40px 15px;
+    margin: 20px 10px;
+    border-radius: 15px;
+  }
+  
+  #coming-soon {
+    padding: 40px 15px;
+    margin: 20px 10px;
+    border-radius: 15px;
+    /* Change background color to dark */
+    background: linear-gradient(135deg, rgba(102, 99, 99, 0.95), rgba(102, 99, 99, 0.95));
+  }
+  
+  #now-showing h2,
+  #coming-soon h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  /* Coming Soon movie info responsive */
+  #coming-soon .movie-info {
+    padding: 12px;
+  }
+  
+  #coming-soon .movie-info h3 {
+    font-size: 1.2em;
+  }
+  
+  #coming-soon .movie-info p {
+    font-size: 0.85em;
+  }
+  
+  #coming-soon .movie-info .release-date {
+    font-size: 0.9em;
+  }
+  
+  #coming-soon .movie-info .notify-btn {
+    padding: 6px 12px;
+    font-size: 0.8em;
+  }
+  
+  /* Movie Grid Responsive - Now Showing uses same responsive design as Coming Soon */
+  .movie-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    padding: 0 10px;
+  }
+  
+  .movie {
+    max-width: 220px;
+    height: 330px;
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Profile dropdown for small screens */
+  .profile-button {
+    width: 36px;
+    height: 36px;
+    font-size: 11px;
+  }
+
+  .profile-initials {
+    font-size: 11px;
+  }
+
+  .profile-dropdown {
+    min-width: 180px;
+    margin-top: 8px;
+  }
+
+  .dropdown-header {
+    padding: 12px;
+  }
+
+  .dropdown-header-initials {
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+  }
+
+  .dropdown-header-name {
+    font-size: 13px;
+  }
+
+  .dropdown-item {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .dropdown-icon {
+    font-size: 14px;
+    margin-right: 8px;
+  }
+
+  /* Enhanced section separation for small screens */
+  #now-showing {
+    padding: 30px 10px;
+    margin: 15px 5px;
+    border-radius: 12px;
+    border: 2px solid rgba(0, 191, 255, 0.2);
+  }
+  
+  #coming-soon {
+    padding: 30px 10px;
+    margin: 15px 5px;
+    border-radius: 12px;
+    /* Change background color to dark */
+    border: 2px solid rgba(102, 99, 99, 0.95);
+    background: linear-gradient(135deg, rgba(102, 99, 99, 0.95), rgba(102, 99, 99, 0.95));
+  }
+  
+  #now-showing h2,
+  #coming-soon h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  #now-showing h2 {
+    background: rgba(0, 191, 255, 0.1);
+  }
+  
+  #coming-soon h2 {
+    background: rgba(102, 99, 99, 0.95);
+  }
+  
+  /* Coming Soon movie info for small screens */
+  #coming-soon .movie-info {
+    padding: 10px;
+  }
+  
+  #coming-soon .movie-info h3 {
+    font-size: 1.1em;
+  }
+  
+  #coming-soon .movie-info p {
+    font-size: 0.8em;
+  }
+  
+  #coming-soon .movie-info .release-date {
+    font-size: 0.85em;
+  }
+  
+  #coming-soon .movie-info .notify-btn {
+    padding: 5px 10px;
+    font-size: 0.75em;
+  }
+  
+  .movie-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 0 5px;
+  }
+  
+  .movie {
+    max-width: 180px;
+    height: 270px;
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Maximum section separation for very small screens */
+  #now-showing {
+    padding: 25px 8px;
+    margin: 10px 3px;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 191, 255, 0.3);
+  }
+  
+  #coming-soon {
+    padding: 25px 8px;
+    margin: 10px 3px;
+    border-radius: 10px;
+    border: 3px solid rgba(102, 99, 99, 0.95);
+    /* Change background color to dark */
+    background: linear-gradient(135deg, rgba(102, 99, 99, 0.95), rgba(102, 99, 99, 0.95));
+  }
+  
+  #now-showing h2,
+  #coming-soon h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    padding: 8px;
+    border-radius: 6px;
+  }
+  
+  /* Coming Soon movie info for very small screens */
+  #coming-soon .movie-info {
+    padding: 8px;
+  }
+  
+  #coming-soon .movie-info h3 {
+    font-size: 1em;
+  }
+  
+  #coming-soon .movie-info p {
+    font-size: 0.75em;
+  }
+  
+  #coming-soon .movie-info .release-date {
+    font-size: 0.8em;
+  }
+  
+  #coming-soon .movie-info .notify-btn {
+    padding: 4px 8px;
+    font-size: 0.7em;
+  }
+  
+  .movie-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 8px;
+    padding: 0 5px;
+  }
+  
+  .movie {
+    max-width: 150px;
+    height: 225px;
+    min-width: 120px;
+  }
+}
